@@ -117,7 +117,7 @@ Remove-PSSession $Session
 
 Connect-MgGraph
 # Additional script to assign license
-# Retrieve the SKU details for the SPE_E3 license
+# Retrieve the SKU details for the license
 $e33ku = Get-MgSubscribedSku -All | Where-Object { $_.SkuPartNumber -eq $params["License Type"] ` }
 
 # Create an array containing the SPE_E3 SKU ID for license assignment
